@@ -1,0 +1,28 @@
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div{
+    margin: auto;
+    width: 80%;
+    height: 320px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    background-color:rgba(236, 136, 54, 0.678);
+    font-family: sans-serif;
+    border-radius: 6px;
+}
+p{
+    text-align: justify;
+    margin-right: 20px;
+}
+
+img{
+    float: left;
+    display: block;
+    margin: 10px;
+    width: 300px;
+    opacity: 0.9;
+    border-radius: 6px;
+
+}
