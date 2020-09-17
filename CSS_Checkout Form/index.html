@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            <h1>Checkout</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <form action="./result.html" name="Form" method="" id="Form">
+                    <div class="box">
+                        <h2>Contact information</h2>
+                    </div>
+                    <div class="box">
+                        <label for="email">Email</label>
+                        <br />
+                        <input type="email" name="email" id="email" maxlength="45" placeholder="Enter your email..." />
+                    </div>
+                    <div class="box">
+                        <label for="phone">Phone</label>
+                        <br />
+                        <input type="number" name="phone" id="phone" value="phone" min="10" max="20"
+                            placeholder="Enter your phone..." />
+                    </div>
+                    <div class="box">
+                        <h2>Shipping adress</h2>
+                    </div>
+                    <div class="box">
+                        <label for="Fullname">Full name</label>
+                        <br>
+                        <input type="text" name="name" id="Fullname" 
+                            placeholder="Enter your Full name...">
+                    </div>
+                    <div class="box">
+                        <label for="Address">Address</label>
+                        <br>
+                        <input type="text" name="name" id="Address" 
+                            placeholder="Enter your Address...">
+                    </div>
+                    <div class="box">
+                        <label for="City">City</label>
+                        <br>
+                        <input type="text" name="name" id="City" 
+                            placeholder="Enter your City...">
+                    </div>
+                    <div class="box">
+                        Country <br />
     
+                        <select>
+                            <option value="0">Turkey</option>
+                            <option value="1">Germany</option>
+                            <option value="2">USA</option>
+                            <option value="3">Canada</option>
+                            <option value="4">UK</option>
+
+                          </select>
+                    </div>
+                    <div class="box">
+                        <label for="Post">Post Code</label>
+                        <br>
+                        <input type="text" name="Post" id="Post" 
+                            placeholder="Enter your postal code...">
+                    </div>
+                    <div class="box">
+                        <input type="checkbox" name="type" id="type-1" value="information" />
+                        <label for="type-1">See this information next time</label>
+                        <br />
+
+                    </div>
+                    <div>
+                        <input type="submit" value="Continue" name="Continue" id="submit" />
+                    </div>
+
+
+                </form>
+
+            </section>
+
+            <section>
+
+            </section>
+
+
+        </div>
+    </main>
 </body>
+
 </html>
