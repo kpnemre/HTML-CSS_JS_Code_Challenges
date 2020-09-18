@@ -26,6 +26,8 @@ body {
    */
 main {
   display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /**
@@ -339,5 +341,144 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main form {
+  position: relative;
+  width: 85%;
+}
+
+header h1 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+form .box input {
+  margin-top: 6px;
+  border: 1px solid #828282;
+  padding: 8px 5px 8px 45px;
+  color: #828282;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form .box {
+  opacity: 0.8;
+  padding: 5px;
+  font-size: 12px;
+}
+
+h3 {
+  opacity: 0.8;
+}
+
+.quantity {
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 30px;
+  border-radius: 10%;
+  margin-top: 0px;
+}
+
+button {
+  width: 20px;
+  height: 20px;
+}
+
+.product {
+  background-color: rgba(128, 128, 128, 0.158);
+  border-radius: 5%;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.product .box {
+  padding: 15px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  border-radius: 5%;
+  float: left;
+}
+
+.productpay {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  opacity: 0.9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  border-top: 1px solid grey;
+}
+
+.info {
+  text-align: left;
+  vertical-align: top;
+  width: 250px;
+  height: 100px;
+  opacity: 0.7;
+  margin-left: 15px;
+  margin-top: 0;
+}
+
+strong {
+  color: sandybrown;
+}
+
+#submit {
+  color: white;
+  font-size: 12px;
+  width: 80px;
+  height: 40px;
+  border-radius: 8%;
+  border: white;
+  display: block;
+  position: absolute;
+  right: -10px;
+  opacity: 1;
+  background-color: #f2994a;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  background-color: white;
+  color: black;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 470px 350px;
+      grid-template-columns: 470px 350px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 /*# sourceMappingURL=style.css.map */

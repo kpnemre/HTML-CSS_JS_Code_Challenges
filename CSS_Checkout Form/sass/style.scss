@@ -1,1 +1,23 @@
-@import "normalize"
+@import "normalize";
+@import "section";
+@import "button";
+@import "product";
+@import "submit";
+// @import "globals";
+
+html,body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.container {
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 470px 350px;
+    justify-content: center;
+    align-content: center;
+      
+}
