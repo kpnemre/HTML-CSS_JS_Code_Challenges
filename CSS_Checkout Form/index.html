@@ -13,81 +13,100 @@
 
 <body>
     <header>
-            <h1>Checkout</h1>
-       
+        <h1>Checkout</h1>
+
     </header>
     <main>
         <div class="container">
             <section>
                 <form action="./result.html" name="Form" method="" id="Form">
                     <div class="contact" style="margin-bottom: 50px;">
-                    
+
                         <h3>Contact information</h3>
-                    
-                    <div class="box">
-                        <label for="email">Email</label>
-                        <br />
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" name="email" id="email" maxlength="45" placeholder="Enter your email..." required />
 
-                        
+                        <div class="box">
+                            <label for="email">Email</label>
+                            <br />
+                            <div style="position: relative;">
+                                <i class="fas fa-envelope" style="position: absolute; top: 15px; left: 10px;"></i>
+                                <input type="email" name="email" id="email" maxlength="45"
+                                    placeholder="Enter your email..." required />
+
+                            </div>
+
+
+                        </div>
+                        <div class="box">
+                            <label for="phone">Phone</label>
+                            <br />
+                            <div style="position: relative;">
+                                <i class="fas fa-phone" style="position: absolute; top: 15px; left: 10px;"></i>
+                                <input type="number" name="phone" id="phone" value="phone" min="10" max="20"
+                                    placeholder="Enter your phone..." />
+                            </div>
+                        </div>
                     </div>
-                    <div class="box">
-                        <label for="phone">Phone</label>
-                        <br />
-                        <i class="fas fa-phone"></i>
-                        <input type="number" name="phone" id="phone" value="phone" min="10" max="20"
-                            placeholder="Enter your phone..." />
-                    </div>
-                </div>
-                    <div class="shipping">
+                    <div class="shipping" style="position: relative;">
                         <h3>Shipping adress</h3>
-                    <div class="box">
-                        <label for="Fullname">Full name</label>
-                        <br>
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="name" id="Fullname" placeholder="Enter your Full name...">
-                    </div>
-                    <div class="box">
-                        <label for="Address">Address</label>
-                        <br>
-                        <i class="fas fa-address-card"></i>
-                        <input type="text" name="name" id="Address" placeholder="Enter your Address...">
-                    </div>
-                    <div class="box">
-                        <label for="City">City</label>
-                        <br>
-                        <i class="fas fa-city"></i>
-                        <input type="text" name="name" id="City" placeholder="Enter your City...">
-                    </div>
-                    <div class="box" id="country">
-                        <label for="country">Country</label>
-                        <i class="fas fa-globe-europe"></i><br /> <br>
+                        <div class="box">
+                            <label for="Fullname">Full name</label>
+                            <br>
+                            <div style="position: relative;">
+                                <i class="fas fa-user" style="position: absolute; top: 15px; left: 10px;"></i>
+                                <input type="text" name="name" id="Fullname" placeholder="Enter your Full name...">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <label for="Address">Address</label>
+                            <br>
+                            <div style="position: relative;">
+                                <i class="fas fa-address-card" style="position: absolute; top: 15px; left: 10px;"></i>
+                                <input type="text" name="name" id="Address" placeholder="Enter your Address...">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <label for="City">City</label>
+                            <br>
+                            <div style="position: relative;">
+                                <i class="fas fa-city" style="position: absolute; top: 15px; left: 10px;"></i>
+                                <input type="text" name="name" id="City" placeholder="Enter your City...">
+                            </div>
+                        </div>
+                        <div class="box" id="country" style="width: 100px;">
+                            <label for="country">Country</label>
+                            <div style="position: relative; ;">
+                                <i class="fas fa-globe-europe"
+                                    style="position: absolute; top: 15px; left: 10px;"></i><br />
 
-                        <select name="country" id="country">
-                            <option value="0">Turkey</option>
-                            <option value="1">Germany</option>
-                            <option value="2">USA</option>
-                            <option value="3">Canada</option>
-                            <option value="4">UK</option>
+                                <select name="country" id="countries">
+                                    <option value="0">Turkey</option>
+                                    <option value="1">Germany</option>
+                                    <option value="2">USA</option>
+                                    <option value="3">Canada</option>
+                                    <option value="4">UK</option>
 
-                        </select>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <label for="Post">Post Code</label>
+                            <br>
+                            <div style="position: relative;">
+                                <i class="fas fa-mail-bulk" style="position: absolute; top: 15px; left: 10px;"></i>
+                                <input type="text" name="Post" id="Post" placeholder="Enter your postal code...">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" name="type" id="type-1" value="information" style="width: 10px;"
+                                required />
+                            <label for="type-1">See this information next time</label>
+
+                        </div>
+                        <div>
+                            <input type="submit" value="Continue" name="Continue" id="submit" />
+                        </div>
                     </div>
-                    <div class="box">
-                        <label for="Post">Post Code</label>
-                        <br>
-                        <i class="fas fa-mail-bulk"></i>
-                        <input type="text" name="Post" id="Post" placeholder="Enter your postal code...">
-                    </div>
-                    <div class="box" >
-                        <input type="checkbox" name="type" id="type-1" value="information" style="width: 10px;" required/>
-                        <label for="type-1" >See this information next time</label>
-                        
-                    </div>
-                </div>
-                    <div>
-                        <input type="submit" value="Continue" name="Continue" id="submit" />
-                    </div>
+
 
                 </form>
             </section>
@@ -98,12 +117,12 @@
                             <img src="./images/photo1.png" alt="backbag">
                         </div>
                         <div class="info">
-                            <p >Vintage Backbag</p>
+                            <p>Vintage Backbag</p>
                             <p> <strong>$54.99 </strong> <del>$94.99</del></p>
-                            <div class="quantity">
-                                <button><i class="fas fa-minus" aria-hidden="true"></i></button>
-                                <p>1</p>
-                                <button><i class="fas fa-plus" aria-hidden="true"></i></button>
+                            <div class="quantity" >
+                                <button onclick="minus('bag')"><i class="fas fa-minus" aria-hidden="true"></i></button>
+                                <p id="bag">1</p>
+                                <button onclick="plus('bag')"><i class="fas fa-plus" aria-hidden="true"></i></button>
                             </div>
                         </div>
 
@@ -116,31 +135,42 @@
                             <p>Levi Shoes</p>
                             <p> <strong>$74.99 </strong> <del>$124.99</del></p>
                             <div class="quantity">
-                                <button><i class="fas fa-minus" aria-hidden="true"></i></button>
-                                <p>1</p>
-                                <button><i class="fas fa-plus" aria-hidden="true"></i></button>
+                                <button onclick="minus('shoes')"><i class="fas fa-minus"
+                                        aria-hidden="true"></i></button>
+                                <p id="shoes">1</p>
+                                <button onclick="plus('shoes')"><i class="fas fa-plus" aria-hidden="true"></i></button>
                             </div>
 
                         </div>
                     </div>
-                  
 
-                        <div class="productpay" id="ship" style="margin-top: 40px;">
-                            
-                            <p >Shipping</p>
-                            <p style="margin-left: 200px;">$19</p>
-                        </div>
 
-                        <div class="productpay" id="total">
-                          
-                            <p>Total</p>
-                            <p style="margin-left: 200px;">$148.98</p>
-                        </div>
-                    
+                    <div class="productpay" id="ship" style="margin-top: 40px;">
+
+                        <p>Shipping</p>
+                        <p style="margin-left: 200px;">$19</p>
+                    </div>
+
+                    <div class="productpay" id="total">
+
+                        <p id="total">Total</p>
+                        <p style="margin-left: 200px;">$148.98</p>
+                    </div>
+
                 </div>
             </section>
         </div>
     </main>
+
+    <script>
+        function minus(id) {
+            document.getElementById(id).innerHTML.stepDown(1);
+        }
+
+        function plus(id) {
+            document.getElementById(id).innerHTML.stepUp(1);
+        }
+    </script>
 </body>
 
 </html>

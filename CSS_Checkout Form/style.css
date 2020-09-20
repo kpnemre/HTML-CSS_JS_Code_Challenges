@@ -379,6 +379,11 @@ h3 {
   opacity: 0.8;
 }
 
+#countries {
+  width: 120px;
+  padding: 1px 15px 8px 25px;
+}
+
 .quantity {
   border: 1px solid black;
   display: -webkit-box;
@@ -388,12 +393,19 @@ h3 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 30px;
-  border-radius: 10%;
-  margin-top: 0px;
+  height: 35px;
+  border-radius: 20px;
+  opacity: 0.8;
 }
 
 button {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+  width: 25rem;
+  height: 25rem;
+  background-color: rgba(131, 133, 117, 0.158);
+  border-radius: 20px;
+  margin-top: 8px;
   width: 20px;
   height: 20px;
 }
@@ -448,6 +460,7 @@ strong {
 }
 
 #submit {
+  position: absolute;
   color: white;
   font-size: 12px;
   width: 80px;
@@ -459,6 +472,7 @@ strong {
   right: -10px;
   opacity: 1;
   background-color: #f2994a;
+  margin-bottom: 20px;
 }
 
 html, body {
@@ -480,5 +494,17 @@ html, body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+    row-gap: 5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
