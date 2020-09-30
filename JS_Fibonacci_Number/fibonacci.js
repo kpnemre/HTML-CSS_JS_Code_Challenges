@@ -1,5 +1,10 @@
      
-        document.getElementById("btn_1").addEventListener("click", fibonacci)
+       
+       
+       
+       document.getElementById("btn_1").addEventListener("click", fibonacci)
+
+       
         function fibonacci() {
             const n = document.getElementById("inp_1").value;
             const arr= [1,1];
