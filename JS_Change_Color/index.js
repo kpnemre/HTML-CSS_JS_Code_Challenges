@@ -17,6 +17,7 @@ function getRandomColor() {
 function changeColors (){
 
     document.querySelector("body").style.backgroundColor= getRandomColor();
+    document.querySelector("#colorName").textContent= getRandomColor();
 
     
 };
