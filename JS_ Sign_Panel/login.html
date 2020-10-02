@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>CLARUSWAY</title>
+    <!-- Include CSS File Here -->
+    <link rel="stylesheet" href="main.css" />
+    <script src="Extentions.js"></script>
+    <script src="aes.js"></script>
+    <script src="jquery-3.3.1.slim.min.js"></script>
+    <!-- Include JS File Here -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h2>Clarusway Giriş Sayfası</h2>
+            <form id="form_id" method="post" name="myform">
+                <label>Kullanıcı Adı :</label>
+                <input type="text" name="username" id="username" />
+                <label>Şifre :</label>
+                <input type="password" name="password" id="password" />
+                <input type="button" value="GİRİŞ" id="submit" onclick="girisYap()" />
+            </form>
+        </div>
+    </div>
+    <script>
+        
+            var attempt = 3;
+        function girisYap(){
+            var username = new URLSearchParams(window.location.search).get('username');
+            var password =  new URLSearchParams(window.location.search).get('password');
+            var usernameInput = document.getElementById("username").value;
+            var passwordInput = document.getElementById("password").value;
+            if (username == usernameInput && password == passwordInput){
+                alert("you are winner");
+                window.location.href = "https://clarusway.com";
+            }
+            else {
+                attempt--;
+                alert(attmpt +"deneme kaldı");
+                if (attempt == 0) {
+                    document.getElementById("username").disabled = true;
+                    document.getElementById("password").disabled = true;
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
