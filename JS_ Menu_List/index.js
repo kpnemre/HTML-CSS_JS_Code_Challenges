@@ -93,6 +93,9 @@ function displayMenuItems(menuList) {
   let sectionContent = "";
 
   // map ile ?
+  // menuList "a" gibi bir değişken. yukarıda addEvent içinde bu foksiyon da 
+  // menu yazdığı için menu objesini dönüyor. aşağıdan filteredMenu objesi 
+  // bu fonksiyonda dönüyor.
   menuList.forEach((item) => {
     sectionContent += `<article class="menu-item">
         <img src=${item.img} alt="menu item" class="photo" />
