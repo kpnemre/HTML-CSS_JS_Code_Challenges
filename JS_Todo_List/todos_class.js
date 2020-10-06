@@ -1,100 +1,59 @@
-/*
- * 1) TODO'ya tekrar basılınca, todo durumu eski haline gelsin
- *    İpucu (Tek bir satırda değişiklik yapılacak)
- *
- * 2) Todo silme operasyonu
- **/
-
 const todoList = [];
-const todoListElement = document.querySelector('#myUL');
-document.querySelector('#todo_button').addEventListener('click', addTodo);
 
-// console.log(todoListElement);
-function addTodo () {
-  const todoText = document.querySelector('#myInput').value;
+class TodoList {
+  constructor(listElementParam) {
+    this.todoListElement = listElementParam;
+  }
 
+  add(todoText) {
     const todoObject = {
       // id: todoList.length * 5,
       id: todoList.length,
       todoText: todoText,
       isDone: false,
+    };
 
-};
+    todoList.push(todoObject);
+    this.display();
+  }
 
-todoList.push(todoObject);
-// console.log(todoList);
-displayTodos();
+  done(todoId) {
+    const selectedTodoIndex = todoList.findIndex((item) => item.id == todoId);
+    todoList[selectedTodoIndex].isDone = true;
 
-}
+    this.display();
+  }
 
-function doneTodo (todoId){
-  //indexof object lerde kullanılmaz
-  const selectedTodoIndex = todoList.findIndex(myTodo => myTodo.id==todoId);
-  todoList[selectedTodoIndex].isDone = true;
+  display() {
+    this.todoListElement.innerHTML = "";
 
-displayTodos ();
-}
+    todoList.forEach((item) => {
+      const listElement = document.createElement("li");
 
-function displayTodos(){
+      listElement.innerText = item.todoText;
+      listElement.setAttribute("data-id", item.id);
 
-  document.querySelector('#myInput').value= "";
+      if (item.isDone) {
+        listElement.classList.add("checked");
+      }
 
-  todoListElement.innerHTML = "";
-  todoList.forEach(item=> {
-
-     const listElement = document.createElement("li");
-     listElement.innerHTML= item.todoText;
-     listElement.setAttribute('data-id', item.id);
-
-     if (item.isDone) {
-      listElement.classList.add('checked'); 
-     }
-     listElement.addEventListener('click',function(e){
+      listElement.addEventListener("click", function (e) {
         const selectedId = e.target.getAttribute("data-id");
-        doneTodo (selectedId);
-     });
+        myTodoList.done(selectedId);
+      });
 
-     todoListElement.appendChild(listElement);
- 
-  });
+      this.todoListElement.appendChild(listElement);
+    });
+  }
 }
 
+const listSection = document.querySelector("#myUL");
+const secondList = document.querySelector("#severekAyrilanlar");
 
+const myTodoList = new TodoList(listSection);
 
+document.querySelector("#todo_button").addEventListener("click", function () {
+  const todoText = document.querySelector("#myInput").value;
 
-
-
-
-//   display() {
-//     this.todoListElement.innerHTML = "";
-
-//     todoList.forEach((item) => {
-//       const listElement = document.createElement("li");
-
-//       listElement.innerText = item.todoText;
-//       listElement.setAttribute("data-id", item.id);
-
-//       if (item.isDone) {
-//         listElement.classList.add("checked");
-//       }
-
-//       listElement.addEventListener("click", function (e) {
-//         const selectedId = e.target.getAttribute("data-id");
-//         myTodoList.done(selectedId);
-//       });
-
-//       this.todoListElement.appendChild(listElement);
-//     });
-//   }
-// }
-
-// const listSection = document.querySelector("#myUL");
-// const secondList = document.querySelector("#severekAyrilanlar");
-
-// const myTodoList = new TodoList(listSection);
-
-// document.querySelector("#todo_button").addEventListener("click", function () {
-//   const todoText = document.querySelector("#myInput").value;
-
-//   myTodoList.add(todoText);
-// });
+  myTodoList.add(todoText);
+});
