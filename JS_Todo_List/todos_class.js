@@ -28,6 +28,8 @@ class TodoList {
     this.todoListElement.innerHTML = "";
 
     todoList.forEach((item) => {
+    
+
       const listElement = document.createElement("li");
 
       listElement.innerText = item.todoText;
