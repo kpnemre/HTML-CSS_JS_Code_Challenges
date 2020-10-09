@@ -1,36 +1,38 @@
-const userinput = document.getElementById('userinput');
+
+
+
+let userinput = document.getElementById('userinput');
+
 const useroutput = document.getElementById('useroutput');
-
-
-
-
-
-
 
 document.querySelector('#button').addEventListener('click', reverseWords);
 
 
 
 function reverseWords () {
-  userinput.innerHTML= "";
 
 
   // console.log(userinput.value);
 
 let input = userinput.value.split(' ');
 
+
+
+
   // console.log(input)
+
   if (input.length <2){
     alert("Programs do not reverse single word");
     confirm('Could you try again !');
-    userinput.innerHTML= "";
-
+    
+    document.getElementById('userinput').value = ' ';
+    
     console.warn('Write more than a word');
-
   }
   else{
     let output =' ';
-  userinput.innerHTML= "";
+  
+    document.getElementById('userinput').value = ' ';
 
 
     for (i = 1; i < input.length+1; i++) {
@@ -39,12 +41,7 @@ let input = userinput.value.split(' ');
       }
       console.log(output);
       useroutput.innerHTML = output;
-
-
   }
-
-
-
 
 }
  
