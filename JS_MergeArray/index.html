@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-top: 50px;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+        #button {
+	cursor: pointer;
+	position: relative;
+	padding: 1.5rem 3.5rem;
+	border-radius: 3.75rem;
+	line-height: 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	
+	border: 1px solid #012880;
+	background-image: 'gray';
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+}
+#userinput, #userinput2,#useroutput {
+    border: 1px solid grey;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Merge Arrays</h1>
+    </div>
+    <div class="container">
+        <input type="text" id="userinput">
+    </div>
+    <div class="container">
+        <input type="text" id="userinput2">
+    </div>
+
+    <div class="container">
+        <button id="button">Merge Them!</button>
+    </div>
+
+    <div class="container">
+        <p id="useroutput"></p>
+    </div>
+
+
+
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>
