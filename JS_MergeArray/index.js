@@ -25,7 +25,6 @@ let input2 = userinput2.value.split(' ');
 //   console.log(input2)
 
 
-
 if (input.length == 1 && input2.length == 1){
     var output = input;
     output.sort();
@@ -42,7 +41,7 @@ else if (input.length != 1 && input2.length == 1){
 }
 else {
     var output = [...input, ...input2]; 
-    // Desc method
+    // Spread method.
     output.sort();
     
 }
