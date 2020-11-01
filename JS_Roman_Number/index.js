@@ -1,81 +1,69 @@
+//Englist to roman/
 
-// ----Roman to Number Convert
+let inputeng = document.getElementById('inputEng');
+let outputrom = document.getElementById('outputRom');
 
-let userinput = document.getElementById('userinput');
-const useroutput = document.getElementById('useroutput');
-
-document.querySelector('#button').addEventListener('click', RomanConvert);
-
+document.getElementById('btneng').addEventListener('click', RomanConvert);
 
 
-
+const RomanDict = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 };
 
 
 function RomanConvert() {
+    num = '';
+    outputrom.innerHTML = '';
+    eng = inputeng.value;
 
-  let convertNumber= 0;
-  useroutput.innerHTML ='';
-
-    num = userinput.value.toUpperCase().split('');
-
-    let lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1};
-  
-    let i= 0;
-    let j;
-    
-    
-    for (i=0;i<num.length; i++) {
-      for (j in lookup){
-          if (j === num[i]){
-            convertNumber += parseInt(lookup[j])
-          }
-      }
-      
-        
-    }
-    console.log(convertNumber);
-    useroutput.innerHTML = convertNumber;
-    
-    
-    // for ( i in lookup ) {
-    //   while ( num >= lookup[i] ) {
-    //     roman += i;
-    //     num -= lookup[i];
-    //   }
-    // }
-    // console.log(roman)
-    // useroutput2.innerHTML = roman;
-  }
- 
-
-
-// -----------------------------------------------------------------------
-
-// ---- Number to Roman  Convert
- 
-let userinput2 = document.getElementById('userinput2');
-const useroutput2 = document.getElementById('useroutput2');
-
-document.querySelector('#button2').addEventListener('click', NumberConvert);
-
-
-function NumberConvert() {
-  let number = '';
-  useroutput2.innerHTML = '';
-    num = userinput2.value;
-    var lookup = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1};
-  
     let i;
-    
-    for ( i in lookup ) {
+    if (eng>3999){
+        alert("Please enter a number lower 3999")
+    }else{
+    for (i in RomanDict) {
+        while (eng >= RomanDict[i]) {
+            num += i;
+            eng -= RomanDict[i];
+        }
 
-      while ( num >= lookup[i] ) {
-        number += i;
-        num -= lookup[i];
-      }
     }
-    console.log(number)
-    useroutput2.innerHTML = number;
-  }
-// -----------------------------------------------------------
+    console.log(num)
+    outputrom.innerHTML = num;
+    inputeng.value= '';
+    inputeng.focus();
+    }
+}
 
+//===============Roman to English Convert===============
+
+let inputrom = document.getElementById('inputRom');
+let outputeng = document.getElementById('outputEng');
+
+document.getElementById('btnrom').addEventListener('click', EnglishConvert);
+
+
+
+function EnglishConvert() {
+
+    
+   
+    outputeng.innerHTML = '';
+
+    romanNumber = inputrom.value.toUpperCase();
+    const romanNumList = ["CM","M","CD","D","XC","C","XL","L","IX","X","IV","V","I"];
+    const corresp = [900,1000,400,500,90,100,40,50,9,10,4,5,1];
+    let index =  0, num = 0;
+    for(let i in romanNumList){
+        index = romanNumber.indexOf(romanNumList[i]);
+        while(index != -1){
+          num += parseInt(corresp[i]);
+          romanNumber = romanNumber.replace(romanNumList[i],"-");
+          index = romanNumber.indexOf(romanNumList[i]);
+        }
+      }
+      outputeng.innerHTML = num;
+      inputrom.value= '';
+      inputrom.focus();
+    //   console.log(num);
+    //   console.log(inputrom);
+
+
+}
