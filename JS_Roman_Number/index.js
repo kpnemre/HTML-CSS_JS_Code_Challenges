@@ -49,7 +49,7 @@ function EnglishConvert() {
 
     romanNumber = inputrom.value.toUpperCase();
     const romanNumList = ["CM","M","CD","D","XC","C","XL","L","IX","X","IV","V","I"];
-    const corresp = [900,1000,400,500,90,100,40,50,9,10,4,5,1];
+    const corresp =      [900,1000,400,500,90,100,40,50,9,10,4,5,1];
     let index =  0, num = 0;
     for(let i in romanNumList){
         index = romanNumber.indexOf(romanNumList[i]);
